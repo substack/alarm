@@ -21,7 +21,13 @@ $ at 9:00 'mplayer -vo none weatherchannel.mp4'
 
 # install
 
-Copy `at` and `alarm` into your $PATH somewhere.
+With [bpkg](https://github.com/bpkg/bpkg) do:
+
+```
+bpkg install substack/alarm
+```
+
+Or, copy `at` and `alarm` into your $PATH somewhere.
 
 Modify `alarm` to play an audio file of your chosing.
 
