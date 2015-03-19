@@ -1,0 +1,9 @@
+{
+  "name": "alarm",
+  "version": "0.0.1",
+  "description": "wake the fuck up",
+  "global": "true",
+  "install": "chmod +x alarm at && install -b alarm at ${PREFIX:-/usr/local}/bin",
+  "scripts": [ "alarm", "at" ]
+}
+
