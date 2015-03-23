@@ -1,12 +1,15 @@
 #!/bin/bash
-FILE=$HOME/media/internet/jamz.mp4
+if [ "$ALARM_FILE" == ""]
+then
+    ALARM_FILE=$HOME/media/internet/jamz.mp4
+fi
 
-if test \! -f "$FILE"; then
-    mkdir -p `dirname "$FILE"`
-    youtube-dl https://www.youtube.com/watch?v=1cAdJ3Ns1gE -o $FILE
+if test \! -f "$ALARM_FILE"; then
+    mkdir -p `dirname "$ALARM_FILE"`
+    youtube-dl https://www.youtube.com/watch?v=1cAdJ3Ns1gE -o $ALARM_FILE
 fi
 
 at "$*"
 amixer set Master unmute
 amixer set Master 100%
-mplayer -vo none "$FILE"
+mplayer -vo none "$ALARM_FILE"
